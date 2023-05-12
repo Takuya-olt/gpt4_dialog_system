@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  chat_app:
+    container_name: chat_app
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./app:/app
+      - /mnt/wslg:/mnt/wslg
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=$DISPLAY
+      - PULSE_SERVER=$PULSE_SERVER
+      - WAYLAND_DISPLAY=$WAYLAND_DISPLAY
+      - XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR
+    tty: true
+
+  voicevox_engine:
+    image: voicevox/voicevox_engine
+    container_name: voicevox
+    ports:
+      - "50021:50021"
+    tty: true
+

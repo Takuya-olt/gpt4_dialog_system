@@ -1,0 +1,6 @@
+pandas
+pyaudio
+pygame
+SpeechRecognition
+openai
+python-dotenv
