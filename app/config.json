@@ -1,5 +1,5 @@
 {
-    "MODEL_NAME": "gpt-4",
+    "MODEL_NAME": "gpt-3.5-turbo-0301",
     "SYSTEM_ROLE": "You are knowledgeable and to enage in a conversation.",
     "SYSTEM_SETTINGS": {
         "1": "If you don't know anything, you say 'うーん，ぼくには分かりません。'.",
