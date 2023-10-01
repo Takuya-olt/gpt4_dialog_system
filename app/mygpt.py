@@ -44,4 +44,9 @@ def ask(prompt):
 
 if __name__ == "__main__":
     # for test
-    print(ask("openaiのCEOは誰"))
+    mes = "openaiのCEOは誰"
+    while True:
+        print(ask(mes))
+        mes = input(">>> ")
+        if mes == "q":
+            break
